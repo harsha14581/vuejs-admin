@@ -8,6 +8,10 @@ import JQuery from 'jquery'
 import VueSlideBar from 'vue-slide-bar'
 import VueSweetalert2 from 'vue-sweetalert2'
 import VueGoodWizard from 'vue-good-wizard'
+import axios_interceptor from '../axios-interceptor';
+import axios from "axios";
+import VueAxios from "vue-axios";
+import VueCookies from "vue-cookies";
 // eslint-disable-next-line
 let $ = JQuery
 
@@ -19,6 +23,9 @@ const options = {
 Vue.use(BootstrapVue)
 Vue.use(VueSweetalert2, options)
 Vue.use(VueGoodWizard)
+Vue.use(VueAxios, axios, VueCookies);
+Vue.use(axios_interceptor)
+Vue.prototype.$axios = axios;
 
 Vue.component('vue-slide-bar', VueSlideBar)
 Vue.config.productionTip = false

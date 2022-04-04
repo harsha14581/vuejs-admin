@@ -30,6 +30,20 @@
           </b-collapse>
         </li>
         <li class="nav-item">
+          <router-link :to="{ path: '/manage-activities' }" class="nav-link">
+            <i class="menu-icon typcn typcn-document-text"></i>
+            <span class="menu-title">Manage Activities</span>
+            <i class="menu-arrow"></i>
+          </router-link>
+        </li>
+           <li class="nav-item">
+          <router-link :to="{ path: '/manage-user-activities' }" class="nav-link">
+            <i class="menu-icon typcn typcn-document-text"></i>
+            <span class="menu-title">Manage User Activities</span>
+            <i class="menu-arrow"></i>
+          </router-link>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" v-b-toggle="'ui-basic'">
             <i class="menu-icon typcn typcn-coffee"></i>
             <span class="menu-title">Basic UI Elements</span>
